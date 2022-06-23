@@ -7,14 +7,17 @@ import time
 # Output: computes the sum of the series (v + v // k + v // k**2 + ...)
 #         returns the sum of the series
 def sum_series (v, k):
-    p = 0
-    total = 0
+    result=v
+    p=1
+    divide=v//(k**p)
     
-    while v // k ** p != 0:
-        total += v // k ** p
-        p += 1
-        
-    return total
+    while divide>=1:
+        result+=(divide)
+        p+=1
+        divide=v//(k**p)
+    
+    return result
+
 
 
 
