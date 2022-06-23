@@ -1,3 +1,14 @@
+#  File: employee.py
+#  Description: Creates class definitions for various types of employees in a company that inherit various characteristics from one another
+#  Student Name: Emily Wang
+#  Student UT EID: ew6985
+#  Partner Name: Sean Thomas
+#  Partner UT EID: sft372
+#  Course Name: CS 313E
+#  Unique Number: 86439
+#  Date Created: 06/22/2022
+#  Date Last Modified: 06/22/2022
+
 import sys
 import time
 
@@ -19,15 +30,16 @@ def sum_series (v, k):
     return result
 
 
-
-
 # Input: n an integer representing the total number of lines of code
 #        k an integer representing the productivity factor
 # Output: returns v the minimum lines of code to write using linear search
 def linear_search (n, k):
-    pass
-
-
+    for v in range(10**6):
+        guess=sum_series(v,k)
+        if guess>=n:
+            return v
+    
+    return None
 
 # Input: n an integer representing the total number of lines of code
 #        k an integer representing the productivity factor
@@ -50,7 +62,7 @@ def binary_search (n, k):
         mid = (lo + hi) // 2
         
     return v
-            
+
 
 
 
@@ -82,5 +94,6 @@ def main():
     print()
     print()
 
-if __name__ == "__main__":    
-    main()
+if __name__ == "__main__":
+  main()
+
